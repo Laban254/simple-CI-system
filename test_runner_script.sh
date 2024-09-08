@@ -12,5 +12,4 @@ git fetch
 # Checkout the specified commit
 git checkout $1
 
-# Run your test suite here
 ./run_tests.sh

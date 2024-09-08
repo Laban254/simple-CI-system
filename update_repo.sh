@@ -3,7 +3,6 @@
 # Directory where the repository is located
 REPO_PATH="/home/kibe/projects/test_repo"
 
-# Change to the repository directory
 cd $REPO_PATH || { echo "Repository directory not found"; exit 1; }
 
 # Get the latest commit ID

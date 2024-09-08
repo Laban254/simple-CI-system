@@ -79,10 +79,9 @@ def check_runners():
     while True:
         print("Checking runners...")
         
-        # Define a URL for the health check
         health_check_url = "/health"
         
-        for runner in REGISTERED_RUNNERS[:]:  # Iterate over a copy of the list
+        for runner in REGISTERED_RUNNERS[:]:
             runner_url = f"http://{runner}:{PORT}{health_check_url}"
             try:
                 # Send a health check request
@@ -95,18 +94,15 @@ def check_runners():
                     RUNNER_STATUS[runner] = "unresponsive"
                     
             except requests.RequestException as e:
-                # Handle the case where the request fails
                 print(f"Runner {runner} is unresponsive. Error: {e}")
                 RUNNER_STATUS[runner] = "unresponsive"
                 
-        # Remove unresponsive runners
         for runner, status in list(RUNNER_STATUS.items()):
             if status == "unresponsive":
                 if runner in REGISTERED_RUNNERS:
                     REGISTERED_RUNNERS.remove(runner)
                     print(f"Removed unresponsive runner {runner}.")
                 
-        # Sleep before the next check
         time.sleep(10)
 
 # Test Runner
