@@ -42,22 +42,24 @@
 ## Setup
 
 1.  **Clone the Repository**:
-
     
-    `git clone https://github.com/laban254/simple-ci-system.git
+   
+    
+    `git clone https://github.com/yourusername/simple-ci-system.git
     cd simple-ci-system` 
     
 2.  **Install Dependencies**: Ensure you have Python and the necessary libraries installed.
     
-3.  **Run the CI System**:
+3.  **Configure Repository Path**: Update the `REPO_PATH` in the `main.py` and `update_repo.sh` scripts to point to your local clone of the test repository.
     
-
+    -   Test Repository: [Laban254/test_repo](https://github.com/Laban254/test_repo)
+4.  **Run the CI System**:
+    
+ 
     
     `python main.py` 
     
-4.  **Run the Test Runner**: Ensure that the test runner script is properly configured and executable.
-    
-
+5.  **Run the Test Runner**: Ensure that the test runner script is properly configured and executable.
 ## Directory Structure
 
 -   `main.py`: The main script that runs the CI system.
